@@ -1,0 +1,111 @@
+/* Liste des films ajoutés */
+.movie_list {
+  display: flex;
+  flex-direction: column; /* chaque film sur une ligne */
+  gap: 15px; /* espace entre les films */
+  margin-top: 20px;
+}
+
+/* Carte d'un film ajouté */
+.movie_card {
+  display: flex;
+  flex-direction: row; /* image à gauche, texte à droite */
+  align-items: flex-start;
+  padding: 15px;
+  background: #222;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Image du film */
+.movie_card img.locandina {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Infos film */
+.info_section {
+  flex: 1;
+}
+
+.movie_header h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.movie_header h4 {
+  margin: 5px 0;
+  font-weight: normal;
+  color: #bbb;
+}
+
+.minutes {
+  font-size: 0.9rem;
+  color: #ff4c4c;
+}
+
+/* Description */
+.text {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Icons sociales */
+.movie_social {
+  margin-top: 10px;
+}
+
+.movie_social ul {
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.movie_social ul li {
+  cursor: pointer;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .movie_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .movie_card img.locandina {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+.add_movie_form {
+  display: flex;
+  flex-direction: column; /* Met les champs en colonne */
+  gap: 10px; /* Espace vertical entre les champs */
+  max-width: 300px; /* Largeur du formulaire */
+}
+
+.add_movie_form input,
+.add_movie_form button {
+  padding: 8px;
+  font-size: 14px;
+  width: 100%; /* Prend toute la largeur */
+  box-sizing: border-box; /* Évite le débordement */
+}
+
+.add_movie_form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add_movie_form button:hover {
+  background-color: #0056b3;
+}
