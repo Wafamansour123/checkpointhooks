@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Card.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare, faHeart, faComment, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import movies from './Movies';
 
 const HeartIcon = () => {
   const [liked, setLiked] = useState(false);
@@ -20,7 +22,7 @@ const Card = () => {
   return (
     <div>
       {/* Premier film : Bright */}
-      <div className="movie_card" id="bright">
+      <div className="movie_card" id="1">
         <div className="info_section">
           <div className="movie_header">
             <img
@@ -39,6 +41,10 @@ const Card = () => {
               human cop is forced to work with an Orc to find a weapon everyone is
               prepared to kill for.
             </p>
+             <br/>
+           <Link to="/trailer/1"><button>trailer</button></Link>
+
+
           </div>
           <div className="movie_social">
             <ul>
@@ -57,7 +63,7 @@ const Card = () => {
       </div>
 
       {/* Deuxième film : Titanic */}
-      <div className="movie_card" id="titanic">
+      <div className="movie_card" id="2">
         <div className="info_section">
           <div className="movie_header">
             <img
@@ -75,6 +81,11 @@ const Card = () => {
               A seventeen-year-old aristocrat falls in love with a kind but poor artist
               aboard the luxurious, ill-fated RMS Titanic.
             </p>
+             <br/>
+             <Link to="/trailer/2">
+  <button>trailer</button>
+</Link>
+
           </div>
           <div className="movie_social">
             <ul>
@@ -93,7 +104,7 @@ const Card = () => {
       </div>
 
       {/* Troisième film : Inception */}
-      <div className="movie_card" id="inception">
+      <div className="movie_card" id="3">
         <div className="info_section">
           <div className="movie_header">
             <img
@@ -112,23 +123,35 @@ const Card = () => {
               technology is given the inverse task of planting an idea into the mind
               of a CEO.
             </p>
+            <br/>
+             <Link to="/trailer/3">
+  <button>trailer</button>
+</Link>
           </div>
+    
           <div className="movie_social">
             <ul>
               <li><FontAwesomeIcon icon={faShare} /></li>
               <li><HeartIcon /></li>
               <li><FontAwesomeIcon icon={faComment} /></li>
+              <br/>
+                
               <li>
                 <a href="https://www.youtube.com/watch?v=YoHD9XEInc0" target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faPlay} style={{ color: 'white' }} /> Voir la bande-annonce
-                </a>
+                </a>  
               </li>
             </ul>
           </div>
+          
+        
         </div>
+        
         <div className="blur_back inception_back" />
       </div>
+      
     </div>
+  
   );
 };
 

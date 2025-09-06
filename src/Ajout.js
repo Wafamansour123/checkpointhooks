@@ -86,7 +86,7 @@ const Card = () => {
                   <p className="text">{movie.description}</p>
                 </div>
 
-                {/* 🎬 Bouton bande-annonce */}
+                {}
                 {movie.trailer && (
                   <div style={{ margin: '10px 0' }}>
                     <a
